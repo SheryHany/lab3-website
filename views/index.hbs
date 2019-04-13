@@ -1,0 +1,13 @@
+<form action="/" method="post">
+    <input name="firstName" type="text" placeholder="First Name..." />
+    <input name="secName" type="text" placeholder="Sec Name..." />
+    <input name="id" type="text" placeholder="Id..." />
+    <button>Add</button>
+</form>
+{{#each users}}
+<div class="myDiv">
+    <h2> {{id}} - {{firstName}} {{secName}}</h2>
+    <button onclick="window.location.href='/edit/{{id}}'">edit</button>
+    <button onclick="window.location.href='/{{id}}'">delete</button>
+</div>
+{{/each}}
